@@ -1,0 +1,16 @@
+time="2023-01-13T12:19:04-03:00" level=warning msg="No contact address has been configured."
+time="2023-01-13T12:19:04-03:00" level=warning msg="Please consider adding a contact_address entry in your config.json"
+goose: no migrations to run. current version: 20220321133237
+time="2023-01-13T12:19:04-03:00" level=info msg="Starting IMAP monitor manager"
+time="2023-01-13T12:19:04-03:00" level=info msg="Starting new IMAP monitor for user admin"
+time="2023-01-13T12:19:04-03:00" level=info msg="Starting admin server at https://0.0.0.0:3333"
+time="2023-01-13T12:19:04-03:00" level=info msg="Background Worker Started Successfully - Waiting for Campaigns"
+time="2023-01-13T12:19:04-03:00" level=info msg="Starting phishing server at http://0.0.0.0:4430"
+2023/01/13 12:19:10 http: TLS handshake error from 10.15.1.231:50309: remote error: tls: unknown certificate
+time="2023-01-13T12:19:11-03:00" level=info msg="10.15.1.231 - - [13/Jan/2023:12:19:11 -0300] \"GET /login?next=%2F HTTP/2.0\" 200 1040 \"\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76\""
+time="2023-01-13T12:19:11-03:00" level=info msg="10.15.1.231 - - [13/Jan/2023:12:19:11 -0300] \"GET /css/dist/gophish.css HTTP/2.0\" 200 52514 \"https://10.15.1.52:3333/login?next=%2F\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76\""
+time="2023-01-13T12:19:12-03:00" level=info msg="10.15.1.231 - - [13/Jan/2023:12:19:12 -0300] \"GET /images/favicon.ico HTTP/2.0\" 200 1150 \"https://10.15.1.52:3333/login?next=%2F\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76\""
+time="2023-01-13T12:19:14-03:00" level=info msg="CTRL+C Received... Gracefully shutting down servers"
+time="2023-01-13T12:19:14-03:00" level=fatal msg="http: Server closed"
+gophish: error: unexpected >>, try --help
+gophish: error: unexpected >>, try --help
