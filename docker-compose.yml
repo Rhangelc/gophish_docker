@@ -8,7 +8,7 @@ networks:
 services:
   gophish:
     container_name: gophish
-    image: rhangelcs/gophish_docker:latest
+    build: . #rhangelcs/gophish_docker:latest
     hostname: gophish
     ports:
       - "3333:3333"
@@ -19,7 +19,11 @@ services:
     stdin_open: true 
     volumes:
       - ./vol/gophish:/opt/gophish
-      - ./vol/logs:/var/log/
+      - ./vol/gophish/gophish.crt:/opt/gophish/
+      - ./vol/gophish/gophish.key:/opt/gophish/
+      - ./vol/gophish/config.json:/opt/gophish/
+      - ./vol/logs/gophish.log:/var/log/
+    command: bash -c "go build" 
     command: bash -c "nohup ./gophish >> /var/log/gophish.log" 
     networks:
       automacao:
