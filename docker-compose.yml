@@ -19,9 +19,9 @@ services:
     stdin_open: true 
     volumes:
       - ./vol/gophish:/opt/gophish
-      - ./vol/gophish/gophish.crt:/opt/gophish/
-      - ./vol/gophish/gophish.key:/opt/gophish/
-      - ./vol/gophish/config.json:/opt/gophish/
+      - ./vol/gophish/gophish.crt:/opt/gophish/gophish.crt
+      - ./vol/gophish/gophish.key:/opt/gophish/gophish.key
+      - ./vol/gophish/config.json:/opt/gophish/config.json
       - ./vol/logs/gophish.log:/var/log/
     command: bash -c "go build" 
     command: bash -c "nohup ./gophish >> /var/log/gophish.log" 
