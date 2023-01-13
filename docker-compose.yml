@@ -1,0 +1,26 @@
+version: '3.8'
+networks:
+  automacao:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.35.0.0/24
+services:
+  gophish:
+    container_name: gophish
+    build: .
+    hostname: gophish
+    ports:
+      - "3333:3333"
+      - "8443:8443"
+      - "80:80"
+      - "8080:8080"
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./vol/gophish:/opt/gophish
+      - ./vol/logs:/var/log/
+    command: bash -c "nohup ./gophish >> /var/log/gophish.log"
+    networks:
+      automacao:
+        ipv4_address: 10.35.0.10
